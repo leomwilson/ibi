@@ -1,0 +1,53 @@
+enum Color {
+    Reset,
+    Black,
+    Red,
+    Green,
+    Yellow,
+    Blue,
+    Magenta,
+    Cyan,
+    White,
+}
+
+impl Color {
+    fn fg(&self) -> str {
+        match *self {
+            Color::Reset => "ESC[0m",
+            Color::Black => "ESC[30m",
+            Color::Red => "ESC[31m",
+            Color::Green = "ESC[32m",
+            Color::Yellow = "ESC[33m",
+            Color::Blue = "ESC[34m",
+            Color::Magenta = "ESC[35m",
+            Color::Cyan = "ESC[36m",
+            Color::White = "ESC[37m",
+        }
+    }
+    fn bg(&self) -> str {
+        match *self {
+            Color::Reset => "ESC[0m]",
+            Color::Black => "ESC[40m",
+            Color::Red => "ESC[41m",
+            Color::Green = "ESC[42m",
+            Color::Yellow = "ESC[43m",
+            Color::Blue = "ESC[44m",
+            Color::Magenta = "ESC[45m",
+            Color::Cyan = "ESC[46m",
+            Color::White = "ESC[47m",
+        }
+    }
+        fn bg(&self) -> str {
+        match *self {
+            Color::Reset => "ESC[0m]",
+            Color::Black => "ESC[40m",
+            Color::Red => "ESC[41m",
+            Color::Green = "ESC[42m",
+            Color::Yellow = "ESC[43m",
+            Color::Blue = "ESC[44m",
+            Color::Magenta = "ESC[45m",
+            Color::Cyan = "ESC[46m",
+            Color::White = "ESC[47m",
+        }
+    }
+}
