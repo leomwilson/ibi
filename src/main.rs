@@ -1,6 +1,7 @@
 use colored::*;
 use std::env;
 use std::path::Path;
+mod vcs;
 
 fn pwd() -> colored::ColoredString {
     let home = env::var("HOME").unwrap(); // get the user's home directory
@@ -35,5 +36,5 @@ fn pchar() -> colored::ColoredString {
 }
 
 fn main() {
-    println!("{} {}\n{} ", pwd(), venv(), pchar());
+    println!("{} {}{}\n{} ", pwd(), venv(), vcs::git(), pchar());
 }
