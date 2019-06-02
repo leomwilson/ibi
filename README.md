@@ -1,3 +1,5 @@
+# WARNING: This is no longer maintained
+
 # ibi
 
 Ibi is a semi-minimalistic ZSH theme built entirely in Rust.
